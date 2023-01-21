@@ -2,13 +2,13 @@ const auth = require('./src/router/auth.router');
 const ajout = require('./src/router/ajout.router');
 const liste = require('./src/router/liste.router');
 const express = require('express');
-const app = express();  
-const bodyParser = require('body-parser');
-const cors = require ('cors');
-app.use(cors());
+const app = express();
+// const bodyParser = require('body-parser');
+const cors= require('cors')
 require('dotenv').config();
-app.use(bodyParser.json()) //pour lire les données json
-app.use(bodyParser.urlencoded({extended:false})) //pour lire les données
+app.use(cors());
+app.use(express.json()) //pour lire les données json
+app.use(express.urlencoded({extended:true})) 
 port = process.env.port
 app.use('/auth',auth);
 app.use('/ajout',ajout);
