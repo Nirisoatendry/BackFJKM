@@ -1,6 +1,7 @@
 const pool = require('../database/db');
 const login = async (req,res)=>{
     const { username , password } = req.body;
+    console.log({ username , password })
     try {
         const [rows,fields] = await pool.execute('SELECT * FROM `admin` WHERE `username` = ? AND `password`= ?', [username,password]);
         console.log(rows);
