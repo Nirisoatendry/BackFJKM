@@ -1,12 +1,12 @@
 const pool = require('../database/db');
 const login = async (req,res)=>{
-    const { username , password } = req.body;
+    const {username, password } = req.body;
     try {
-        const [rows,fields] = await pool.execute('SELECT * FROM `admin` WHERE `username` = ? AND `password`= ?', [username,password]);
+        const [rows,fields] = await pool.execute('SELECT * FROM `admin` WHERE `username` = ? AND `password`=?', [username,password]);
         console.log(rows);
         if(rows.length>0){ // utilisateur trouvé
             res.json({
-                data : null,
+                data : rows[0].username,
                 succes : true,
                 message: 'successfuly'
             })
