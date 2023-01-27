@@ -1,12 +1,8 @@
 const express = require('express');
 const router = express.Router();
- 
-router.post('/nodimandry/:type',(req,res)=>{
-    //ajouter 
-});
-
-router.post('ankehitriny/:type',(req,res)=>{
-    //ajouter
+const {createMember} = require('../controller/ajout.controller');
+router.post('/:status/:type',(req,res)=>{
+    createMember(req,res);
 });
 
 router.post('/famille',(req,res)=>{

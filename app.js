@@ -3,7 +3,6 @@ const ajout = require('./src/router/ajout.router');
 const liste = require('./src/router/liste.router');
 const express = require('express');
 const app = express();
-// const bodyParser = require('body-parser');
 const cors= require('cors')
 require('dotenv').config();
 app.use(cors());
