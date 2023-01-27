@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const {createMember} = require('../controller/ajout.controller');
+const {createMember, createFamily} = require('../controller/ajout.controller');
 router.post('/:status/:type',(req,res)=>{
     createMember(req,res);
 });
 
 router.post('/famille',(req,res)=>{
-    //ajouter famille
+    createFamily(req,res);
 });
 module.exports = router;

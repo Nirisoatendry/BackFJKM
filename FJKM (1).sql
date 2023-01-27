@@ -66,24 +66,24 @@ INSERT INTO `asa` (`id_asa`, `asa`) VALUES
 --
 
 CREATE TABLE `dada` (
-  `id_dada` int(11) NOT NULL,
-  `nom` varchar(255) NOT NULL,
-  `prenom` varchar(255) NOT NULL,
-  `daty` date NOT NULL,
-  `lieu` varchar(100) NOT NULL,
-  `profession` varchar(255) NOT NULL,
-  `sexe` int(11) NOT NULL,
-  `situation` int(11) NOT NULL,
-  `adresse` varchar(255) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `faritra` int(11) NOT NULL,
-  `batisa` int(11) NOT NULL,
-  `mpandray` int(11) NOT NULL,
-  `andraikitra` varchar(100) NOT NULL,
-  `taranaka` int(11) NOT NULL,
-  `sampana` int(11) NOT NULL,
-  `rantsana` int(11) NOT NULL,
-  `asa` int(11) NOT NULL
+  `id_dada` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `nom_dada` varchar(255) NOT NULL,
+  `prenom_dada` varchar(255) NOT NULL,
+  `daty_dada` date NOT NULL,
+  `lieu_dada` varchar(100) NOT NULL,
+  `profession_dada` varchar(255) NOT NULL,
+  `sexe_dada` int(11) NOT NULL,
+  `situation_dada` int(11) NOT NULL,
+  `adresse_dada` varchar(255) NOT NULL,
+  `email_dada` varchar(100) NOT NULL,
+  `faritra_dada` int(11) NOT NULL,
+  `batisa_dada` int(11) NOT NULL,
+  `mpandray_dada` int(11) NOT NULL,
+  `andraikitra_dada` varchar(100) NOT NULL,
+  `taranaka_dada` int(11) NOT NULL,
+  `sampana_dada` int(11) NOT NULL,
+  `rantsana_dada` int(11) NOT NULL,
+  `asa_dada` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -105,24 +105,24 @@ CREATE TABLE `fianakaviana` (
 --
 
 CREATE TABLE `neny` (
-  `id_neny` int(11) NOT NULL,
-  `nom` varchar(255) NOT NULL,
-  `prenom` varchar(255) NOT NULL,
-  `daty` date NOT NULL,
-  `lieu` varchar(100) NOT NULL,
-  `profession` varchar(255) NOT NULL,
-  `sexe` int(11) NOT NULL,
-  `situaton` int(11) NOT NULL,
-  `adresse` varchar(255) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `faritra` int(11) NOT NULL,
-  `batisa` int(11) NOT NULL,
-  `mpandray` int(11) NOT NULL,
-  `andraikitra` varchar(100) NOT NULL,
-  `taranaka` int(11) NOT NULL,
-  `sampana` int(11) NOT NULL,
-  `rantsana` int(11) NOT NULL,
-  `asa` int(11) NOT NULL
+  `id_neny` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `nom_neny` varchar(255) NOT NULL,
+  `prenom_neny` varchar(255) NOT NULL,
+  `daty_neny` date NOT NULL,
+  `lieu_neny` varchar(100) NOT NULL,
+  `profession_neny` varchar(255) NOT NULL,
+  `sexe_neny` int(11) NOT NULL,
+  `situaton_neny` int(11) NOT NULL,
+  `adresse_neny` varchar(255) NOT NULL,
+  `email_neny` varchar(100) NOT NULL,
+  `faritra_neny` int(11) NOT NULL,
+  `batisa_neny` int(11) NOT NULL,
+  `mpandray_neny` int(11) NOT NULL,
+  `andraikitra_neny` varchar(100) NOT NULL,
+  `taranaka_neny` int(11) NOT NULL,
+  `sampana_neny` int(11) NOT NULL,
+  `rantsana_neny` int(11) NOT NULL,
+  `asa_neny` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -207,26 +207,26 @@ CREATE TABLE `taranaka` (
 --
 
 CREATE TABLE `zanaka` (
-  `id_zanaka` int(11) NOT NULL,
+  `id_zanaka` int(11) NOT NULL AUTO_INCREMENT,
   `id_dada` int(11) NOT NULL,
   `id_neny` int(11) NOT NULL,
-  `nom` varchar(255) NOT NULL,
-  `prenom` varchar(255) NOT NULL,
-  `daty` date NOT NULL,
-  `lieu` varchar(100) NOT NULL,
-  `profession` varchar(255) NOT NULL,
-  `sexe` int(11) NOT NULL,
-  `situation` int(11) NOT NULL,
-  `adresse` varchar(255) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `faritra` int(11) NOT NULL,
-  `batisa` int(11) NOT NULL,
-  `mpandray` int(11) NOT NULL,
-  `andraikitra` varchar(100) NOT NULL,
-  `taranaka` int(11) NOT NULL,
-  `sampana` int(11) NOT NULL,
-  `rantsana` int(11) NOT NULL,
-  `asa` int(11) NOT NULL
+  `nom_zanaka` varchar(255) NOT NULL,
+  `prenom_zanaka` varchar(255) NOT NULL,
+  `daty_zanaka` date NOT NULL,
+  `lieu_zanaka` varchar(100) NOT NULL,
+  `profession_zanaka` varchar(255) NOT NULL,
+  `sexe_zanaka` int(11) NOT NULL,
+  `situation_zanaka` int(11) NOT NULL,
+  `adresse_zanaka` varchar(255) NOT NULL,
+  `email_zanaka` varchar(100) NOT NULL,
+  `faritra_zanaka` int(11) NOT NULL,
+  `batisa_zanaka` int(11) NOT NULL,
+  `mpandray_zanaka` int(11) NOT NULL,
+  `andraikitra_zanaka` varchar(100) NOT NULL,
+  `taranaka_zanaka` int(11) NOT NULL,
+  `sampana_zanaka` JSON NOT NULL,
+  `rantsana_zanaka` JSON NOT NULL,
+  `asa_zanaka` JSON NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
