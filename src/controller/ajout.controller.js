@@ -30,7 +30,7 @@ const createMember = async (req, res) => {
         rows,
         fields,
       ] = await pool.execute(
-        `insert into ${type} (id_dada,id_neny,nom_zanaka,prenom_zanaka,dat_zanakay,lieu_zanaka,profession_zanaka,sexe_zanaka,situation_zanaka,adresse_zanaka,email_zanaka,faritra_zanaka,batisa_zanaka,mpandray_zanaka,andraikitra_zanaka,taranaka_zanaka,sampana_zanaka,rantsana_zanaka,asa_zanaka) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) `,
+        `insert into ${type} (id_dada,id_neny,nom_zanaka,prenom_zanaka,daty_zanaka,lieu_zanaka,profession_zanaka,sexe_zanaka,situation_zanaka,adresse_zanaka,email_zanaka,faritra_zanaka,batisa_zanaka,mpandray_zanaka,andraikitra_zanaka,taranaka_zanaka,sampana_zanaka,rantsana_zanaka,asa_zanaka) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) `,
         [
           id_dada,
           id_neny,
@@ -90,7 +90,7 @@ const createMember = async (req, res) => {
           rows,
           fields,
         ] = await pool.execute(
-          `insert into ${type} (nom_${type},preno_m${type},daty_${type},lieu_${type},profession_${type},
+          `insert into ${type} (nom_${type},prenom_${type},daty_${type},lieu_${type},profession_${type},
             sexe_${type},situation_${type},adresse_${type},email_${type},faritra_${type},batisa_${type},
             mpandray_${type},andraikitra_${type},taranaka_${type},sampana_${type},rantsana_${type},
             asa_${type}) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) `,
