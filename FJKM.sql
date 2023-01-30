@@ -86,12 +86,12 @@ CREATE TABLE `dada` (
   `batisa_dada` int NOT NULL,
   `mpandray_dada` int NOT NULL,
   `andraikitra_dada` varchar(100) NOT NULL,
-  `taranaka_dada` int NOT NULL,
-  `sampana_dada` int NOT NULL,
-  `rantsana_dada` int NOT NULL,
-  `asa_dada` int NOT NULL,
+  `taranaka_dada` int DEFAULT NULL,
+  `asa_dada` json DEFAULT NULL,
+  `rantsana_dada` json DEFAULT NULL,
+  `sampana_dada` json DEFAULT NULL,
   PRIMARY KEY (`id_dada`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -100,34 +100,8 @@ CREATE TABLE `dada` (
 
 LOCK TABLES `dada` WRITE;
 /*!40000 ALTER TABLE `dada` DISABLE KEYS */;
+INSERT INTO `dada` VALUES (1,'dada','1','1998-10-12','67ha','mpivarotra',1,1,'itaosy','dada1@gmail.com',1,1,1,'',1,'[1, 3]','[1, 2]','[1, 2]');
 /*!40000 ALTER TABLE `dada` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `dadaNodimandry`
---
-
-DROP TABLE IF EXISTS `dadaNodimandry`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `dadaNodimandry` (
-  `id_dada` int NOT NULL AUTO_INCREMENT,
-  `nom` varchar(100) NOT NULL,
-  `prenom` varchar(100) NOT NULL,
-  `sexe` int NOT NULL,
-  `situation` int NOT NULL,
-  PRIMARY KEY (`id_dada`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `dadaNodimandry`
---
-
-LOCK TABLES `dadaNodimandry` WRITE;
-/*!40000 ALTER TABLE `dadaNodimandry` DISABLE KEYS */;
-INSERT INTO `dadaNodimandry` VALUES (1,'Rakoto','nirina',1,1),(2,'lkjlk','jhkjhk',1,0),(3,'dada2','daa',0,0),(4,'dada1','daa',1,0),(5,'kjhkj','hkj',1,0),(6,'mickael','be',1,0),(7,'zaa','',1,0),(8,'','',0,1),(9,'kjkl','jklj',1,0),(10,'zaqerty','uy',0,1),(11,'','',0,1),(12,'kjhkj','frd',1,0),(13,'lk','kml',1,0),(14,'jhgjhjh','ccc',0,0);
-/*!40000 ALTER TABLE `dadaNodimandry` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -168,7 +142,6 @@ CREATE TABLE `neny` (
   `lieu_neny` varchar(100) NOT NULL,
   `profession_neny` varchar(255) NOT NULL,
   `sexe_neny` int NOT NULL,
-  `situaton_neny` int NOT NULL,
   `adresse_neny` varchar(255) NOT NULL,
   `email_neny` varchar(100) NOT NULL,
   `faritra_neny` int NOT NULL,
@@ -176,11 +149,12 @@ CREATE TABLE `neny` (
   `mpandray_neny` int NOT NULL,
   `andraikitra_neny` varchar(100) NOT NULL,
   `taranaka_neny` int NOT NULL,
-  `sampana_neny` int NOT NULL,
-  `rantsana_neny` int NOT NULL,
-  `asa_neny` int NOT NULL,
+  `sampana_neny` json DEFAULT NULL,
+  `rantsana_neny` json DEFAULT NULL,
+  `asa_neny` json DEFAULT NULL,
+  `situation_neny` int DEFAULT NULL,
   PRIMARY KEY (`id_neny`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -189,6 +163,7 @@ CREATE TABLE `neny` (
 
 LOCK TABLES `neny` WRITE;
 /*!40000 ALTER TABLE `neny` DISABLE KEYS */;
+INSERT INTO `neny` VALUES (1,'neny','1','1998-10-12','67ha','mpivarotra',1,'itaosy','neny1@gmail.com',1,1,1,'',1,'[1, 2]','[1, 2]','[1, 3]',1);
 /*!40000 ALTER TABLE `neny` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -317,7 +292,7 @@ CREATE TABLE `zanaka` (
   `rantsana_zanaka` json NOT NULL,
   `asa_zanaka` json NOT NULL,
   PRIMARY KEY (`id_zanaka`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -326,6 +301,7 @@ CREATE TABLE `zanaka` (
 
 LOCK TABLES `zanaka` WRITE;
 /*!40000 ALTER TABLE `zanaka` DISABLE KEYS */;
+INSERT INTO `zanaka` VALUES (1,1,1,'zanaka','1','1998-10-12','67ha','mpivarotra',1,1,'itaosy','neny1@gmail.com',1,1,1,'',1,'[1, 2]','[1, 2]','[1, 3]'),(2,1,2,'zanaka','2','1998-10-12','67ha','mpivarotra',1,1,'itaosy','neny1@gmail.com',1,1,1,'',1,'[1, 2]','[1, 2]','[1, 3]');
 /*!40000 ALTER TABLE `zanaka` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -338,4 +314,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-01-27 17:03:40
+-- Dump completed on 2023-01-30  8:53:47
